@@ -16,12 +16,14 @@ export default function AboutPageHeader() {
         title={t.about.title}
         text={profile.summary[language]}
         backgroundClassName={headerGradientClassName}
+        sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh]"
         layout="split"
         textPosition="left"
         verticalAlign="center"
         showSideImage
         contentWrapperClassName="mx-auto md:justify-items-center md:gap-10"
-        imageWrapperClassName="justify-self-center md:justify-self-center"
+        textBlockClassName="pt-32 pb-44 text-left sm:pb-0 md:pt-0"
+        imageWrapperClassName="absolute bottom-10 left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0 justify-self-center md:justify-self-center"
       />
     </div>
   )
