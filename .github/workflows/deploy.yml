@@ -24,7 +24,6 @@ jobs:
       - run: npm run build
         env:
           VITE_BASE: /PoliProfile/
-          VITE_CONTACT_ENDPOINT: https://formspree.io/f/YOUR_FORM_ID
       
       - uses: actions/upload-pages-artifact@v3
         with:
