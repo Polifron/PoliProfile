@@ -1,0 +1,299 @@
+{
+  "name": "Florentin",
+  "headline": {
+    "en": "React Developer",
+    "ro": "Dezvoltator React"
+  },
+  "summary": {
+    "en": "I’m a software developer with a strong focus on clean architecture, performance, and usability. I build scalable web and mobile apps, always aiming for maintainable code and intuitive user experiences. I’m driven by continuous improvement, modern development practices, and delivering products that feel fast and purposeful.",
+    "ro": "Sunt un dezvoltator software cu un puternic accent pe arhitectură curată, performanță și ușurință în utilizare. Construiesc aplicații web și mobile scalabile, având mereu în vedere codul ușor de întreținut și experiențele intuitive pentru utilizatori. Sunt motivat de îmbunătățirea continuă, de practicile moderne de dezvoltare și de livrarea unor produse rapide și orientate spre scop."
+  },
+  "location": {
+    "en": "Your City, Your Country",
+    "ro": "Orașul tău, Țara ta"
+  },
+  "iam": {
+    "en": "I am",
+    "ro": "Eu sunt"
+  },
+  "email": "you@example.com",
+  "phone": "+00 000 000 000",
+  "skills": [
+    "HTML3",
+    "CSS",
+    "Styled Components",
+    "Redux",
+    "Moq",
+    "xUnit",
+    "React",
+    "TypeScript",
+    "React Native",
+    "JavaScript",
+    "jQuery",
+    "Tailwind CSS",
+    "Bootstrap",
+    "shadcn/ui",
+    ".NET",
+    "C#",
+    "SQL",
+    "OOP",
+    "TDD",
+    "SOLID",
+    "DRY",
+    "YAGNI",
+    "Dapper",
+    "MediatR"
+  ],
+  "techStacks": [
+    {
+      "name": "React",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "url": "https://react.dev"
+    },
+    {
+      "name": "TypeScript",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      "url": "https://www.typescriptlang.org"
+    },
+    {
+      "name": "React Native",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      "url": "https://reactnative.dev"
+    },
+    {
+      "name": "JavaScript",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      "name": "jQuery",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+      "url": "https://jquery.com"
+    },
+    {
+      "name": "HTML3",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
+      "name": "CSS",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
+    },
+    {
+      "name": "Styled Components",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/styledcomponents/styledcomponents-original.svg",
+      "url": "https://styled-components.com"
+    },
+    {
+      "name": "Redux",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      "url": "https://redux.js.org"
+    },
+    {
+      "name": "Tailwind CSS",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+      "url": "https://tailwindcss.com"
+    },
+    {
+      "name": "Bootstrap",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      "url": "https://getbootstrap.com"
+    },
+    {
+      "name": "shadcn/ui",
+      "logo": "https://ui.shadcn.com/favicon.ico",
+      "url": "https://ui.shadcn.com"
+    },
+    {
+      "name": ".NET",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+      "url": "https://dotnet.microsoft.com"
+    },
+    {
+      "name": "C#",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
+      "name": "SQL",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+      "url": "https://learn.microsoft.com/en-us/sql/"
+    },
+    {
+      "name": "Moq",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+      "url": "https://github.com/devlooped/moq"
+    },
+    {
+      "name": "xUnit",
+      "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+      "url": "https://xunit.net"
+    }
+  ],
+  "hobbies": [
+    {
+      "en": "Saving stray pets",
+      "ro": "Salvarea animalelor fără stăpân",
+      "description": {
+        "en": "I have a deep commitment to animal welfare, and supporting stray pets has become one of my most meaningful hobbies. After moving from the capital to a small town, I witnessed many animals struggling without proper care. This experience motivated me to get involved and make a difference. I regularly help stray pets by providing food, temporary shelter, and support for local adoption efforts. Recently, I also began building small wooden shelters in my workshop to offer them safer, more comfortable places to rest. Caring for these animals brings me joy and a strong sense of purpose. It allows me to contribute to the community in a positive, compassionate way while doing something that truly feels rewarding.",
+        "ro": "Îmi pasă foarte mult de animale și ajut animalele fără stăpân ori de câte ori pot — cu hrană, adăpost temporar și sprijin pentru adopții locale. De curând am început să construiesc mici adăposturi din lemn în atelierul meu, pentru a le oferi locuri mai sigure de odihnă."
+      },
+      "image": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "en": "Woodworking",
+      "ro": "Tâmplărie (atelier personal)",
+      "description": {
+        "en": "I manage a small personal workshop where I design and build functional, handcrafted pieces ranging from simple shelving to customized décor. My work combines creativity with practical problem-solving, and I enjoy turning raw materials into useful, lasting items. Recently, my focus has shifted toward creating durable outdoor shelters for stray animals, supporting my ongoing volunteer efforts in animal welfare. This blend of craftsmanship and community care allows me to use my skills in a way that is both meaningful and impactful.",
+        "ro": "Am un mic atelier personal unde proiectez și construiesc piese practice — de la rafturi simple la decor personalizat. În ultima perioadă mă concentrez pe construirea unor adăposturi rezistente pentru exterior, destinate animalelor fără stăpân, ca parte din activitatea mea de voluntariat."
+      },
+      "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "en": "Gardening",
+      "ro": "Grădinărit",
+      "description": {
+        "en": "Gardening is my way of recharging and staying grounded. I enjoy planning each season, planting new varieties, and caring for green spaces as they grow and change. What began as a simple search for a relaxing hobby has become a rewarding routine that brings beauty, balance, and the satisfaction of growing my own fresh produce.",
+        "ro": "Grădinăritul este modul meu de a mă reîncărca. Îmi place să planific fiecare sezon, să plantez și să îngrijesc spațiile verzi. Am început grădina pentru că îmi doream un hobby relaxant și bucuria de a crește hrană proaspătă."
+      },
+      "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "en": "Cooking",
+      "ro": "Gătit",
+      "description": {
+        "en": "Cooking is one of my favorite ways to unwind and express creativity. I enjoy experimenting with flavors, trying new recipes, and preparing fresh, homemade meals. For me, it’s both relaxing and a meaningful way to bring people together. What I enjoy most is seeing others appreciate the dishes I create — especially when they’re trying something new for the first time. Sharing food that surprises and delights people makes the experience even more rewarding.",
+        "ro": "Îmi place să gătesc — să experimentez arome, să încerc rețete noi și să pregătesc mese proaspete. Pentru mine, este atât relaxant, cât și un mod frumos de a împărtăși ceva semnificativ cu cei din jur."
+      },
+      "image": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80"
+    }
+  ],
+  "socialLinks": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-username"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://linkedin.com/in/your-profile"
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Software Programmer",
+      "company": "Roweb (part of Sirma Group) · Full-time · București, România",
+      "period": "iun. 2022 - prezent",
+      "description": "Orchestrating end-to-end software delivery, from analysis and implementation to deployment and continuous improvement across multiple web platforms.",
+      "highlights": [
+        "Managed and maintained 15+ websites using DynamicWeb CMS",
+        "Built frontend features with JavaScript, jQuery, SASS, Bootstrap, HTML, and React",
+        "Delivered backend functionality with DynamicWeb API, .NET C#, and MVC",
+        "Directed automated testing, validated software changes, and mentored development activities"
+      ]
+    },
+    {
+      "id": "exp-2",
+      "role": "Production Developer",
+      "company": "Makita EU · Full-time · Brănești, Ilfov, România",
+      "period": "aug. 2020 - iun. 2022",
+      "description": "Planned, optimized, and automated production workflows while building reporting and process-improvement systems.",
+      "highlights": [
+        "Designed and implemented systems for automating production planning",
+        "Automated data input activities, saving about 400 hours",
+        "Executed KPI reporting and production monitoring routines",
+        "Created workflow documentation and delivered internal training sessions"
+      ]
+    },
+    {
+      "id": "exp-3",
+      "role": "Production Specialist",
+      "company": "Grivița Factory · Full-time · București, România",
+      "period": "iun. 2019 - aug. 2020",
+      "description": "Supported beer production operations by controlling process quality, raw-material flow, and technical documentation.",
+      "highlights": [
+        "Ensured technological flow and production process consistency",
+        "Analyzed and recorded samples, adjusting storage parameters",
+        "Managed raw material supplies with FIFO controls",
+        "Created and updated technical sheets for production processes"
+      ]
+    },
+    {
+      "id": "exp-4",
+      "role": "Production Manager",
+      "company": "E&V Trading Plast SRL · Full-time · București, România",
+      "period": "aug. 2018 - apr. 2019",
+      "description": "Coordinated production execution, personnel planning, and KPI tracking for daily operations.",
+      "highlights": [
+        "Executed production plans and generated KPI reports",
+        "Managed production personnel and material planning",
+        "Estimated material quantities by production index",
+        "Reported production-line issues and managed raw materials/packaging inputs"
+      ]
+    },
+    {
+      "id": "exp-5",
+      "role": "Quality Manager",
+      "company": "E&V Trading Plast SRL · Full-time · București, România",
+      "period": "mar. 2018 - aug. 2018",
+      "description": "Led product quality controls, reporting, and receiving inspections for incoming raw materials.",
+      "highlights": [
+        "Generated quality reports and verified product integrity",
+        "Coordinated sample dispatch to accredited units",
+        "Managed subordinate personnel in quality activities",
+        "Prepared reception reports for quantitative and qualitative checks"
+      ]
+    },
+    {
+      "id": "exp-6",
+      "role": "Quality Specialist",
+      "company": "E&V Trading Plast SRL · Full-time · București, România",
+      "period": "sept. 2017 - mar. 2018",
+      "description": "Handled compliance reporting and process documentation in line with food-industry standards.",
+      "highlights": [
+        "Compiled reports for cycles, weights, scrap statistics, and lap ratios",
+        "Revised documents to maintain compliance with current regulations",
+        "Delivered internal training and monitored work-instruction compliance"
+      ]
+    },
+    {
+      "id": "exp-7",
+      "role": "Telemarketing Agent",
+      "company": "Mellon - Bancpost · Full-time · București, România",
+      "period": "feb. 2017 - sept. 2017",
+      "description": "Managed client retention and issue-resolution workflows for banking card products.",
+      "highlights": [
+        "Supported customer retention initiatives",
+        "Explained credit-card products and related options",
+        "Resolved account issues such as recalculations and closures",
+        "Recorded and prioritized requests in internal databases"
+      ]
+    },
+    {
+      "id": "exp-8",
+      "role": "Call Center Operator",
+      "company": "Amego · Part-time · București, România",
+      "period": "oct. 2016 - feb. 2017",
+      "description": "Handled outbound promotions and inbound requests while maintaining accurate CRM records.",
+      "highlights": [
+        "Conducted product and service promotions by phone",
+        "Handled calls and logged relevant details in dedicated software",
+        "Addressed and resolved client requests efficiently"
+      ]
+    },
+    {
+      "id": "exp-9",
+      "role": "Commercial Worker / Warehouse Manager",
+      "company": "Mega Image · Part-time · București, România",
+      "period": "nov. 2015 - iul. 2016",
+      "description": "Supported retail operations across cashiering, stock control, and warehouse coordination.",
+      "highlights": [
+        "Managed scanning, cash collection, and till balancing",
+        "Verified product validity for food and non-food categories",
+        "Maintained shelf availability and customer assistance",
+        "Monitored stock, placed orders, and verified incoming goods"
+      ]
+    }
+  ]
+}

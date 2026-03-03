@@ -1,0 +1,111 @@
+{
+  "en": {
+    "appTitle": "PoliCoder Portfolio",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "language": {
+      "label": "Language"
+    },
+    "theme": {
+      "label": "Theme",
+      "light": "Light",
+      "dark": "Dark"
+    },
+    "home": {
+      "welcome": "Welcome",
+      "contactMe": "Contact Me",
+      "viewSkills": "View Skills",
+      "techStackAndPractices": "Tech Stack & Practices",
+      "coreSkills": "Core Skills",
+      "locationTitle": "Location",
+      "locationDesc": "Based in",
+      "hobbiesTitle": "Hobbies",
+      "hobbiesDesc": "Beyond coding"
+    },
+    "about": {
+      "title": "About",
+      "corePrinciples": "Core Principles",
+      "workExperience": "Work Experience",
+      "timelineHint": "Scroll to explore the timeline."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Let’s build something great together.",
+      "email": "Email",
+      "phone": "Phone",
+      "location": "Location",
+      "quickMessage": "Quick Message",
+      "quickMessageDesc": "Send me a message and I will get back to you by email.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "Your email",
+      "messagePlaceholder": "Tell me about your project...",
+      "send": "Send",
+      "sending": "Sending...",
+      "sendSuccess": "Your message was sent successfully.",
+      "sendError": "Failed to send message. Please try again.",
+      "validation": "Please complete name, email, and message."
+    },
+    "carousel": {
+      "title": "Tech Stacks",
+      "open": "Open"
+    }
+  },
+  "ro": {
+    "appTitle": "Portofoliu PoliCoder",
+    "nav": {
+      "home": "Acasă",
+      "about": "Despre",
+      "contact": "Contact"
+    },
+    "language": {
+      "label": "Limbă"
+    },
+    "theme": {
+      "label": "Temă",
+      "light": "Deschisă",
+      "dark": "Întunecată"
+    },
+    "home": {
+      "welcome": "Bine ai venit",
+      "contactMe": "Contactează-mă",
+      "viewSkills": "Vezi competențele",
+      "techStackAndPractices": "Tehnologii & practici",
+      "coreSkills": "Competențe de bază",
+      "locationTitle": "Locație",
+      "locationDesc": "Cu bază în",
+      "hobbiesTitle": "Pasiuni",
+      "hobbiesDesc": "Dincolo de programare"
+    },
+    "about": {
+      "title": "Despre",
+      "corePrinciples": "Principii de bază",
+      "workExperience": "Experiență profesională",
+      "timelineHint": "Derulează pentru a explora cronologia."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Hai să construim ceva grozav împreună.",
+      "email": "Email",
+      "phone": "Telefon",
+      "location": "Locație",
+      "quickMessage": "Mesaj rapid",
+      "quickMessageDesc": "Trimite-mi un mesaj și îți răspund pe email.",
+      "namePlaceholder": "Numele tău",
+      "emailPlaceholder": "Emailul tău",
+      "messagePlaceholder": "Spune-mi despre proiectul tău...",
+      "send": "Trimite",
+      "sending": "Se trimite...",
+      "sendSuccess": "Mesajul tău a fost trimis cu succes.",
+      "sendError": "Mesajul nu a putut fi trimis. Încearcă din nou.",
+      "validation": "Completează numele, emailul și mesajul."
+    },
+    "carousel": {
+      "title": "Tehnologii",
+      "instruction": "Folosește săgețile pentru stânga/dreapta. Redarea automată continuă după navigare manuală.",
+      "open": "Deschide"
+    }
+  }
+}
