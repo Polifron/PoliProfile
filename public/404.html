@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poli</title>
+    <script>
+      (function () {
+        var base = '/PoliProfile/';
+        var locationPath = window.location.pathname;
+        if (locationPath.indexOf(base) !== 0) {
+          window.location.replace(base);
+          return;
+        }
+        var redirectPath = locationPath.slice(base.length);
+        var search = window.location.search || '';
+        var hash = window.location.hash || '';
+        var redirect = base + '?/' + redirectPath + search + hash;
+        window.location.replace(redirect);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>

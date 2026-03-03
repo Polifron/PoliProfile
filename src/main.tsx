@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <RoleProvider>
             <AppSettingsProvider>
-                <BrowserRouter>
+                <BrowserRouter basename={import.meta.env.BASE_URL}>
                     <App />
                 </BrowserRouter>
             </AppSettingsProvider>
