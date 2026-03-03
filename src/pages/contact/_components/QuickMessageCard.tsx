@@ -8,7 +8,9 @@ import { useState } from 'react'
 export default function QuickMessageCard() {
   const { t } = useAppSettings()
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? ''
-  const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT ?? `${apiBaseUrl}/api/send-email`
+  // endpoint may point to third-party form service (e.g. Formspree) or internal API
+  const contactEndpoint =
+    import.meta.env.VITE_CONTACT_ENDPOINT || `${apiBaseUrl}/api/send-email`
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -30,12 +32,18 @@ export default function QuickMessageCard() {
     setFeedback({ type: '', text: '' })
 
     try {
+      const isThirdParty = Boolean(import.meta.env.VITE_CONTACT_ENDPOINT)
+      const headers = isThirdParty
+        ? { 'Content-Type': 'application/x-www-form-urlencoded' }
+        : { 'Content-Type': 'application/json' }
+      const body = isThirdParty
+        ? new URLSearchParams({ name, email, message })
+        : JSON.stringify({ name, email, message })
+
       const response = await fetch(contactEndpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, message }),
+        headers,
+        body,
       })
 
       const rawResponse = await response.text()
