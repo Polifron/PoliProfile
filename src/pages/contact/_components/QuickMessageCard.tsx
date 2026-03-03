@@ -8,6 +8,7 @@ import { useState } from 'react'
 export default function QuickMessageCard() {
   const { t } = useAppSettings()
   const apiBaseUrl = import.meta.env.VITE_API_BASE_URL ?? ''
+  const contactEndpoint = import.meta.env.VITE_CONTACT_ENDPOINT ?? `${apiBaseUrl}/api/send-email`
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -29,7 +30,7 @@ export default function QuickMessageCard() {
     setFeedback({ type: '', text: '' })
 
     try {
-      const response = await fetch(`${apiBaseUrl}/api/send-email`, {
+      const response = await fetch(contactEndpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

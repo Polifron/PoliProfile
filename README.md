@@ -34,9 +34,13 @@ EMAIL_FROM=your-sender@email.com
 EMAIL_TO=your-inbox@email.com
 PORT=3000
 VITE_API_BASE_URL=
+VITE_CONTACT_ENDPOINT=
+VITE_BASE=
 ```
 
 Use `VITE_API_BASE_URL` only if your frontend and backend are deployed on different domains (example: `https://your-api.onrender.com`).
+Use `VITE_CONTACT_ENDPOINT` if you want to send the form to a third-party service instead of your own API.
+Use `VITE_BASE` for GitHub Pages base path (example: `/PoliProfile/`).
 
 ### 2) Run frontend + backend together
 
@@ -71,9 +75,27 @@ npm run build
 
 ## Deploy notes
 
+### Option A: GitHub Pages (frontend) + serverless backend
+
+1) Deploy the backend API to Render/Railway/Fly/Vercel/Cloudflare Workers.
+2) Set `VITE_API_BASE_URL` in the frontend build to your backend URL.
+3) For GitHub Pages, set `VITE_BASE` to `/<repo-name>/` (example: `/PoliProfile/`).
+4) Build and publish the `dist` folder to GitHub Pages.
+
+### Option B: GitHub Pages + third-party form service
+
+Use a service like Formspree/Getform/Netlify Forms and set:
+
+```
+VITE_CONTACT_ENDPOINT=https://your-form-endpoint
+```
+
+This bypasses the Express API entirely.
+
+### Notes
+
 - Keep this as one GitHub repo (frontend + backend together).
 - Do **not** commit `.env`; only commit `.env.example`.
-- If you deploy on platforms like Render/Railway/Fly.io, set environment variables in the platform settings.
 - GitHub Pages alone cannot run the Express API.
 
 ## Personal Data Source
