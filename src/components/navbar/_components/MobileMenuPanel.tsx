@@ -7,7 +7,7 @@ export default function MobileMenuPanel({ navItems, onItemClick }) {
   const { language, setLanguage, theme, setTheme, t } = useAppSettings()
 
   return (
-    <div className="border-t border-white/20 bg-background/95 px-4 py-3 backdrop-blur sm:px-6 md:hidden">
+    <div id="mobile-menu-panel" role="region" aria-label="Mobile menu" className="border-t border-white/20 bg-background/95 px-4 py-3 backdrop-blur sm:px-6 md:hidden">
       <div className="flex w-full flex-col gap-3">
         <MobileNavLinks navItems={navItems} onItemClick={onItemClick} />
 
@@ -17,6 +17,7 @@ export default function MobileMenuPanel({ navItems, onItemClick }) {
             value={language}
             onChange={(event) => setLanguage(event.target.value)}
             className="h-9 rounded-md border bg-background px-2 text-sm text-foreground"
+            ariaLabel={t.language.label}
           />
         </label>
 
@@ -26,6 +27,7 @@ export default function MobileMenuPanel({ navItems, onItemClick }) {
             value={theme}
             onChange={(event) => setTheme(event.target.value)}
             className="h-9 rounded-md border bg-background px-2 text-sm text-foreground"
+            ariaLabel={t.theme.label}
           />
         </label>
       </div>

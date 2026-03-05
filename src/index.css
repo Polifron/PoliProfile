@@ -24,12 +24,49 @@ body {
   }
 }
 
+@keyframes header-enter-left {
+  from {
+    opacity: 0;
+    transform: translateX(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes header-enter-right {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .tech-carousel-track {
   animation: tech-carousel-scroll 55s linear infinite;
 }
 
 .tech-carousel-paused {
   animation-play-state: paused;
+}
+
+.header-enter-left {
+  animation: header-enter-left 620ms ease-out both;
+}
+
+.header-enter-right {
+  animation: header-enter-right 620ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .header-enter-left,
+  .header-enter-right {
+    animation: none;
+  }
 }
 
 @theme inline {
@@ -86,7 +123,7 @@ body {
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
+  --muted-foreground: oklch(0.42 0 0);
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -152,6 +189,10 @@ body {
 }
 
 @layer components {
+  .skip-link {
+    @apply absolute left-3 top-3 z-[100] -translate-y-24 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground shadow transition-transform focus:translate-y-0;
+  }
+
   .content-container {
     @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6 lg:px-8 xl:px-10;
   }

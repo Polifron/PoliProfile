@@ -1,9 +1,10 @@
-export default function LanguageSelect({ value, onChange, className }) {
+export default function LanguageSelect({ value, onChange, className, ariaLabel }) {
   return (
     <select
       value={value}
       onChange={onChange}
       className={`${className} underline underline-offset-4`}
+      aria-label={ariaLabel}
     >
       <option value="en" className="bg-background text-foreground">
         🇬🇧 ENG

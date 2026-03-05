@@ -1,6 +1,6 @@
 import { useAppSettings } from '@/context/AppSettingsContext'
 
-export default function ThemeSelect({ value, onChange, className }) {
+export default function ThemeSelect({ value, onChange, className, ariaLabel }) {
   const { t } = useAppSettings()
 
   return (
@@ -8,6 +8,7 @@ export default function ThemeSelect({ value, onChange, className }) {
       value={value}
       onChange={onChange}
       className={`${className} underline underline-offset-4`}
+      aria-label={ariaLabel}
     >
       <option value="light" className="bg-background text-foreground">
         ☀️ {t.theme.light}

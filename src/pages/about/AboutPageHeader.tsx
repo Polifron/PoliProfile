@@ -1,9 +1,8 @@
 import PageHeader from '@/components/PageHeader'
 import { useAppSettings } from '@/context/AppSettingsContext'
-import profile from '@/data/profile.json'
 
 export default function AboutPageHeader() {
-  const { language, theme, t } = useAppSettings()
+  const { theme, t } = useAppSettings()
 
   const headerGradientClassName =
     theme === 'dark'
@@ -14,16 +13,16 @@ export default function AboutPageHeader() {
     <div className="mx-[calc(50%-50vw)] w-screen">
       <PageHeader
         title={t.about.title}
-        text={profile.summary[language]}
+        text="Building Fast, Scalable, and User-Friendly Applications"
         backgroundClassName={headerGradientClassName}
-        sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh]"
+        sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh] sm:min-h-[520px]"
         layout="split"
         textPosition="left"
         verticalAlign="center"
         showSideImage
         contentWrapperClassName="mx-auto md:justify-items-center md:gap-10"
-        textBlockClassName="pt-32 pb-44 text-left sm:pb-0 md:pt-0"
-        imageWrapperClassName="absolute bottom-10 left-1/2 -translate-x-1/2 md:static md:left-auto md:translate-x-0 justify-self-center md:justify-self-center"
+        textBlockClassName="pt-36 pb-6 text-left sm:pt-32 sm:pb-0 md:pt-0"
+        imageWrapperClassName="mt-6 hidden justify-self-center md:mt-0 md:block md:justify-self-center"
       />
     </div>
   )

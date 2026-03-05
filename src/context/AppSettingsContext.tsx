@@ -18,11 +18,13 @@ export function AppSettingsProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem('language', language)
+    document.documentElement.lang = language
   }, [language])
 
   useEffect(() => {
     localStorage.setItem('theme', theme)
     document.documentElement.classList.toggle('dark', theme === 'dark')
+    document.documentElement.style.colorScheme = theme
   }, [theme])
 
   const value = useMemo(

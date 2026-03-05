@@ -25,6 +25,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
     return (
         <div className="relative min-h-screen overflow-x-hidden bg-background">
+            <a href="#main-content" className="skip-link">
+                Skip to main content
+            </a>
             <MouseTrackingCanvas />
             <div className="relative z-10">
                 <Navbar
@@ -32,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     isMobileMenuOpen={isMobileMenuOpen}
                     setIsMobileMenuOpen={setIsMobileMenuOpen}
                 />
-                <main className="w-full py-24">
+                <main id="main-content" className="w-full py-24" tabIndex={-1}>
                     <div className="content-container">{children}</div>
                 </main>
                 <Footer />

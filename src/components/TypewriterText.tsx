@@ -8,39 +8,37 @@ type TypewriterTextProps = {
 export default function TypewriterText({ phrases, className }: TypewriterTextProps) {
     const safePhrases = useMemo(() => phrases.filter(Boolean), [phrases])
     const [phraseIndex, setPhraseIndex] = useState(0)
-    const [text, setText] = useState('')
-    const [isDeleting, setIsDeleting] = useState(false)
+    const [typedText, setTypedText] = useState('')
+    const [completedLines, setCompletedLines] = useState<string[]>([])
     const [cursorVisible, setCursorVisible] = useState(true)
-    const currentPhrase = safePhrases[phraseIndex % Math.max(1, safePhrases.length)] ?? ''
-    const currentPhraseChars = Array.from(currentPhrase)
+    const currentPhrase = safePhrases[phraseIndex] ?? ''
 
     useEffect(() => {
         if (safePhrases.length === 0) return
+        if (phraseIndex >= safePhrases.length) return
 
-        const nextLength = isDeleting ? text.length - 1 : text.length + 1
-        const nextText = currentPhrase.slice(0, Math.max(0, nextLength))
+        if (typedText.length < currentPhrase.length) {
+            const timeoutId = window.setTimeout(() => {
+                setTypedText(currentPhrase.slice(0, typedText.length + 1))
+            }, 58)
 
-        const typingSpeed = isDeleting ? 36 : 62
-        const isPhraseComplete = !isDeleting && nextText === currentPhrase
-        const isPhraseCleared = isDeleting && nextText.length === 0
-        const delay = isPhraseComplete ? 1100 : isPhraseCleared ? 260 : typingSpeed
+            return () => window.clearTimeout(timeoutId)
+        }
 
         const timeoutId = window.setTimeout(() => {
-            setText(nextText)
-
-            if (isPhraseComplete) {
-                setIsDeleting(true)
-                return
-            }
-
-            if (isPhraseCleared) {
-                setIsDeleting(false)
-                setPhraseIndex((prev) => (prev + 1) % safePhrases.length)
-            }
-        }, delay)
+            setCompletedLines((prev) => [...prev, currentPhrase])
+            setTypedText('')
+            setPhraseIndex((prev) => prev + 1)
+        }, 720)
 
         return () => window.clearTimeout(timeoutId)
-    }, [isDeleting, phraseIndex, safePhrases, text])
+    }, [currentPhrase, phraseIndex, safePhrases, typedText])
+
+    useEffect(() => {
+        setPhraseIndex(0)
+        setTypedText('')
+        setCompletedLines([])
+    }, [safePhrases])
 
     useEffect(() => {
         const intervalId = window.setInterval(() => {
@@ -50,29 +48,28 @@ export default function TypewriterText({ phrases, className }: TypewriterTextPro
         return () => window.clearInterval(intervalId)
     }, [])
 
+    const isTypingFinished = phraseIndex >= safePhrases.length
+
     return (
-        <p className={className}>
-            {text.length === 0 ? (
-                <span className={`inline-block transition-opacity ${cursorVisible ? 'opacity-100' : 'opacity-20'}`}>
-                    |
-                </span>
-            ) : null}
+        <ul className={`m-0 list-none space-y-1 p-0 ${className ?? ''}`}>
+            {completedLines.map((line, index) => (
+                <li key={`${line}-${index}`} className="flex items-start gap-2">
+                    <span aria-hidden="true">{'\u2B25'}</span>
+                    <span>{line}</span>
+                </li>
+            ))}
 
-            {currentPhraseChars.map((char, index) => {
-                const isTyped = index < text.length
-                const isCursorPosition = text.length > 0 && index === text.length - 1
-
-                return (
-                    <span key={`${char}-${index}`} className={isTyped ? 'opacity-100' : 'opacity-0'}>
-                        {char}
-                        {isCursorPosition ? (
-                            <span className={`ml-1 inline-block transition-opacity ${cursorVisible ? 'opacity-100' : 'opacity-20'}`}>
-                                |
-                            </span>
-                        ) : null}
+            {!isTypingFinished ? (
+                <li className="flex items-start gap-2">
+                    <span aria-hidden="true">{'\u2B25'}</span>
+                    <span>
+                        {typedText}
+                        <span className={`ml-1 inline-block transition-opacity ${cursorVisible ? 'opacity-100' : 'opacity-20'}`}>
+                            |
+                        </span>
                     </span>
-                )
-            })}
-        </p>
+                </li>
+            ) : null}
+        </ul>
     )
 }

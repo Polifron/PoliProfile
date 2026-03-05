@@ -12,25 +12,25 @@ export default function HomePageHeader() {
   const [showHeader, setShowHeader] = useState(false)
 
   const heroText = {
-    ro: 'Creez experiențe digitale care contează. De la aplicații web la soluții mobile, pun accent pe performanță, arhitectură curată și un design centrat pe utilizator. Îmi place să construiesc software care este rapid, simplu și intuitiv.',
-    en: 'I create digital experiences that matter. From web applications to mobile solutions, I focus on performance, clean architecture, and user-centered design. I enjoy building software that is fast, simple, and intuitive.',
+    ro: 'Software developer crafting fast, clean, and intuitive digital experiences.',
+    en: 'Software developer crafting fast, clean, and intuitive digital experiences.',
   }
   const heroTitle = {
-    ro: `Eu sunt ${profile.name}`,
+    ro: `I am ${profile.name}`,
     en: `I am ${profile.name}`,
   }
 
   const greetingPhrases = ['Hello', 'Bonjour', 'Bună', 'こんにちは', 'Hallo', 'Hola', 'Ciao', 'Olá', 'Hej']
   const heroLines = {
     ro: [
-      'Construiesc aplicații rapide și intuitive.',
-      'Arhitectură curată. Performanță. Simplitate.',
-      'Transform idei în produse funcționale.',
+      'Scalable apps',
+      'Clean architecture',
+      'Products that feel fast and intentional',
     ],
     en: [
-      'I build fast and intuitive applications.',
-      'Clean architecture. Performance. Simplicity.',
-      'I turn ideas into functional products.',
+      'Scalable apps',
+      'Clean architecture',
+      'Products that feel fast and intentional',
     ],
   }
   const headerGradientClassName =
@@ -46,7 +46,7 @@ export default function HomePageHeader() {
     if (!isLastGreeting) {
       const timeoutId = window.setTimeout(() => {
         setGreetingIndex((prev) => prev + 1)
-      }, 320)
+      }, 250)
 
       return () => window.clearTimeout(timeoutId)
     }
@@ -61,14 +61,14 @@ export default function HomePageHeader() {
   if (!showHeader) {
     return (
       <div className="mx-[calc(50%-50vw)] w-screen">
-        <section className={`-mt-24 relative h-[65vh] min-h-[430px] w-full md:h-[72vh] ${headerGradientClassName}`}>
+        <section className={`-mt-24 relative h-[80vh] min-h-[600px] w-full sm:h-[72vh] sm:min-h-[520px] ${headerGradientClassName}`}>
           <div className="absolute inset-0 bg-black/45" />
           <div className="relative flex h-full w-full items-center justify-center">
             <motion.p
               key={greetingPhrases[greetingIndex]}
               initial={{ opacity: 0, y: 12, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.25 }}
+              transition={{ duration: 0.32, ease: 'easeOut' }}
               className="text-4xl font-bold tracking-tight text-white sm:text-5xl"
             >
               {greetingPhrases[greetingIndex]}
@@ -81,12 +81,7 @@ export default function HomePageHeader() {
 
   return (
     <div className="mx-[calc(50%-50vw)] w-screen">
-      <motion.div
-        initial={{ opacity: 0, y: 18 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.55, ease: 'easeOut' }}
-        className="relative"
-      >
+      <div className="relative">
         <div className="pointer-events-none absolute inset-0 z-10">
           <motion.div
             className="absolute left-[9%] top-[20%] h-24 w-24 rounded-full bg-white/10 blur-2xl"
@@ -108,16 +103,16 @@ export default function HomePageHeader() {
           textPosition="center"
           verticalAlign="center"
           contentWrapperClassName="items-center gap-10 md:justify-items-center md:gap-6"
-          textBlockClassName="pt-20 pb-44 text-left sm:pb-0 md:pt-0"
-          imageWrapperClassName="absolute bottom-10 left-1/2 -translate-x-1/2 md:static md:bottom-auto md:left-auto md:translate-x-0 md:justify-self-center"
+          textBlockClassName="header-enter-left pt-36 pb-4 text-left sm:pt-32 sm:pb-0 md:pt-0"
+          imageWrapperClassName="header-enter-right mt-6 hidden justify-self-center md:mt-0 md:block md:static md:bottom-auto md:left-auto md:translate-x-0 md:justify-self-center"
           autoText={
             <TypewriterText
               phrases={heroLines[language as 'ro' | 'en'] ?? heroLines.en}
-              className="min-h-[3.5rem] break-normal text-lg font-semibold leading-relaxed tracking-tight text-white sm:min-h-[2rem] sm:text-xl"
+              className="min-h-[10.5rem] break-normal text-lg font-semibold leading-relaxed tracking-tight text-white sm:min-h-[7.5rem] sm:text-xl"
             />
           }
         />
-      </motion.div>
+      </div>
     </div>
   )
 }

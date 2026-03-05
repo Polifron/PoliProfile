@@ -15,6 +15,9 @@ export default function ContactPageHeader() {
         title={t.contact.title}
         text={t.contact.subtitle}
         backgroundClassName={headerGradientClassName}
+        sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh] sm:min-h-[520px]"
+        verticalAlign="center"
+        textBlockClassName="pt-36 text-left sm:pt-32 md:pt-0"
       />
     </div>
   )

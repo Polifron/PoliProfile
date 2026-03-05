@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import AboutSummarySection from '@/pages/about/_components/AboutSummarySection'
 import CorePrinciplesSection from '@/pages/about/_components/CorePrinciplesSection'
 import HobbiesDetailsSection from '@/pages/about/_components/HobbiesDetailsSection'
 import InteractiveResumeSection from '@/pages/about/_components/InteractiveResumeSection'
@@ -23,6 +24,7 @@ export default function AboutPageBody() {
 
   return (
     <div className="space-y-8">
+      <AboutSummarySection />
       <ProjectsShowcaseSection />
       <WorkExperienceSection />
       <InteractiveResumeSection />

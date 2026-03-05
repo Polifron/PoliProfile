@@ -29,7 +29,7 @@ export default function HeroVisual3D() {
     }
 
     return (
-        <div className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
             <div className="absolute right-10 top-20 h-[320px] w-[320px]" style={{ perspective: 1000 }}>
                 <motion.div
                     ref={containerRef}

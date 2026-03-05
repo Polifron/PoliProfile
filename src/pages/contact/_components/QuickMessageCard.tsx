@@ -83,14 +83,18 @@ export default function QuickMessageCard() {
       </CardHeader>
       <CardContent>
         <form className="space-y-4" onSubmit={handleSubmit}>
+          <label htmlFor="contact-name" className="sr-only">{t.contact.namePlaceholder}</label>
           <Input
+            id="contact-name"
             value={name}
             onChange={(event) => setName(event.target.value)}
             placeholder={t.contact.namePlaceholder}
             name="name"
             autoComplete="name"
           />
+          <label htmlFor="contact-email" className="sr-only">{t.contact.emailPlaceholder}</label>
           <Input
+            id="contact-email"
             value={email}
             onChange={(event) => setEmail(event.target.value)}
             type="email"
@@ -98,7 +102,9 @@ export default function QuickMessageCard() {
             name="email"
             autoComplete="email"
           />
+          <label htmlFor="contact-message" className="sr-only">{t.contact.messagePlaceholder}</label>
           <Textarea
+            id="contact-message"
             value={message}
             onChange={(event) => setMessage(event.target.value)}
             placeholder={t.contact.messagePlaceholder}
@@ -106,7 +112,11 @@ export default function QuickMessageCard() {
             name="message"
           />
           {feedback.text ? (
-            <p className={`text-sm ${feedback.type === 'error' ? 'text-destructive' : 'text-emerald-600 dark:text-emerald-400'}`}>
+            <p
+              role="status"
+              aria-live="polite"
+              className={`text-sm ${feedback.type === 'error' ? 'text-destructive' : 'text-emerald-600 dark:text-emerald-400'}`}
+            >
               {feedback.text}
             </p>
           ) : null}
