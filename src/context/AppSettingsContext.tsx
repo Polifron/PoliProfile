@@ -5,7 +5,14 @@ const AppSettingsContext = createContext(null)
 
 export function AppSettingsProvider({ children }) {
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'en')
-  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'light')
+  const [theme, setTheme] = useState(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+      return savedTheme
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  })
 
   const t = useMemo(() => ui[language] ?? ui.en, [language])
 

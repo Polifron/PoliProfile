@@ -2,11 +2,13 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { useAppSettings } from '@/context/AppSettingsContext'
 import profile from '@/data/profile.json'
+import ParallaxSection from '@/components/ParallaxSection'
 import ImpactCardsSection from '@/pages/home/_components/ImpactCardsSection'
 import SolutionTimelineSection from '@/pages/home/_components/SolutionTimelineSection'
 import TechSkillsSection from '@/pages/home/_components/TechSkillsSection'
 import LocationSection from '@/pages/home/_components/LocationSection'
 import HobbiesSection from '@/pages/home/_components/HobbiesSection'
+import CustomIllustrationSetSection from '@/pages/home/_components/CustomIllustrationSetSection'
 
 export default function HomePageBody() {
   const { language } = useAppSettings()
@@ -53,10 +55,16 @@ export default function HomePageBody() {
           <p className="max-w-3xl text-muted-foreground">{copy.leadText}</p>
         </section> */}
 
-      <section className="space-y-5 rounded-xl bg-muted/40 p-4 sm:p-6">
-        <h3 className="text-2xl font-semibold tracking-tight">{copy.valueTitle}</h3>
-        <ImpactCardsSection />
-      </section>
+      <ParallaxSection>
+        <section className="space-y-5 rounded-xl bg-muted/40 p-4 sm:p-6">
+          <h3 className="text-2xl font-semibold tracking-tight">{copy.valueTitle}</h3>
+          <ImpactCardsSection />
+        </section>
+      </ParallaxSection>
+
+      <ParallaxSection offset={30}>
+        <CustomIllustrationSetSection />
+      </ParallaxSection>
 
       <section className="rounded-xl bg-muted/40 p-4 sm:p-6">
         <Card>
@@ -81,11 +89,13 @@ export default function HomePageBody() {
         <LocationSection />
       </section>
 
-      <section className="space-y-5 rounded-xl bg-muted/40 p-4 sm:p-6">
-        <h3 className="text-2xl font-semibold tracking-tight">{copy.hobbiesTitle}</h3>
-        <p className="content-readable max-w-[75ch] text-muted-foreground">{copy.hobbiesText}</p>
-        <HobbiesSection />
-      </section>
+      <ParallaxSection offset={24}>
+        <section className="space-y-5 rounded-xl bg-muted/40 p-4 sm:p-6">
+          <h3 className="text-2xl font-semibold tracking-tight">{copy.hobbiesTitle}</h3>
+          <p className="content-readable max-w-[75ch] text-muted-foreground">{copy.hobbiesText}</p>
+          <HobbiesSection />
+        </section>
+      </ParallaxSection>
 
     </div>
   )

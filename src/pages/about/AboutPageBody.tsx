@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import CorePrinciplesSection from '@/pages/about/_components/CorePrinciplesSection'
 import HobbiesDetailsSection from '@/pages/about/_components/HobbiesDetailsSection'
+import InteractiveResumeSection from '@/pages/about/_components/InteractiveResumeSection'
 import ProjectsShowcaseSection from '@/pages/about/_components/ProjectsShowcaseSection'
 import WorkExperienceSection from '@/pages/about/_components/WorkExperienceSection'
 
@@ -22,9 +23,10 @@ export default function AboutPageBody() {
 
   return (
     <div className="space-y-8">
-      <CorePrinciplesSection />
       <ProjectsShowcaseSection />
       <WorkExperienceSection />
+      <InteractiveResumeSection />
+      <CorePrinciplesSection />
       <HobbiesDetailsSection />
     </div>
   )

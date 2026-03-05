@@ -67,7 +67,7 @@ export default function PageHeader({
   const imageWrapperBaseClass = `justify-self-center md:justify-self-end ${imageOrderClass}`
 
   return (
-    <section className={`relative -mt-24 h-[65vh] min-h-[430px] w-full overflow-hidden md:h-[72vh] ${sectionClassName ?? ''}`.trim()}>
+    <section className={`relative -mt-24 h-[65vh] min-h-[430px] w-full overflow-hidden md:h-[50vh] ${sectionClassName ?? ''}`.trim()}>
       {image ? (
         <img src={image} alt={title} className="absolute inset-0 h-full w-full object-cover" />
       ) : (

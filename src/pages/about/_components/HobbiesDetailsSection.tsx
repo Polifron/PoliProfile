@@ -8,11 +8,11 @@ export default function HobbiesDetailsSection() {
 
     const copy = {
         ro: {
-            title: 'Dincolo de cod — în detaliu',
+            title: 'Dincolo de cod',
             subtitle: 'Alege o pasiune și descoperă contextul din spatele ei.',
         },
         en: {
-            title: 'Beyond coding — in detail',
+            title: 'Beyond coding',
             subtitle: 'Choose an interest and explore the story behind it.',
         },
     }

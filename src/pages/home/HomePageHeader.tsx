@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
 import PageHeader from '@/components/PageHeader'
 import TypewriterText from '@/components/TypewriterText'
 import { useAppSettings } from '@/context/AppSettingsContext'
@@ -63,7 +64,15 @@ export default function HomePageHeader() {
         <section className={`-mt-24 relative h-[65vh] min-h-[430px] w-full md:h-[72vh] ${headerGradientClassName}`}>
           <div className="absolute inset-0 bg-black/45" />
           <div className="relative flex h-full w-full items-center justify-center">
-            <p className="text-4xl font-bold tracking-tight text-white sm:text-5xl">{greetingPhrases[greetingIndex]}</p>
+            <motion.p
+              key={greetingPhrases[greetingIndex]}
+              initial={{ opacity: 0, y: 12, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.25 }}
+              className="text-4xl font-bold tracking-tight text-white sm:text-5xl"
+            >
+              {greetingPhrases[greetingIndex]}
+            </motion.p>
           </div>
         </section>
       </div>
@@ -72,24 +81,43 @@ export default function HomePageHeader() {
 
   return (
     <div className="mx-[calc(50%-50vw)] w-screen">
-      <PageHeader
-        title={heroTitle[language as 'ro' | 'en'] ?? heroTitle.en}
-        text={heroText[language as 'ro' | 'en'] ?? heroText.en}
-        backgroundClassName={headerGradientClassName}
-        sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh] sm:min-h-[520px]"
-        textPosition="center"
-        verticalAlign="center"
-        contentWrapperClassName="items-center gap-10 md:justify-items-center md:gap-6"
-        textBlockClassName="pt-20 pb-44 text-left sm:pb-0 md:pt-0"
-        imageWrapperClassName="absolute bottom-10 left-1/2 -translate-x-1/2 md:static md:bottom-auto md:left-auto md:translate-x-0 md:justify-self-center"
-        autoText={
-          <TypewriterText
-            phrases={heroLines[language as 'ro' | 'en'] ?? heroLines.en}
-            className="min-h-[3.5rem] break-normal text-lg font-semibold leading-relaxed tracking-tight text-white sm:min-h-[2rem] sm:text-xl"
+      <motion.div
+        initial={{ opacity: 0, y: 18 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.55, ease: 'easeOut' }}
+        className="relative"
+      >
+        <div className="pointer-events-none absolute inset-0 z-10">
+          <motion.div
+            className="absolute left-[9%] top-[20%] h-24 w-24 rounded-full bg-white/10 blur-2xl"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 5.6, repeat: Infinity, ease: 'easeInOut' }}
           />
-        }
-      />
+          <motion.div
+            className="absolute right-[15%] top-[30%] h-28 w-28 rounded-full bg-white/10 blur-2xl"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 6.4, repeat: Infinity, ease: 'easeInOut' }}
+          />
+        </div>
 
+        <PageHeader
+          title={heroTitle[language as 'ro' | 'en'] ?? heroTitle.en}
+          text={heroText[language as 'ro' | 'en'] ?? heroText.en}
+          backgroundClassName={headerGradientClassName}
+          sectionClassName="h-[80vh] min-h-[600px] sm:h-[72vh] sm:min-h-[520px]"
+          textPosition="center"
+          verticalAlign="center"
+          contentWrapperClassName="items-center gap-10 md:justify-items-center md:gap-6"
+          textBlockClassName="pt-20 pb-44 text-left sm:pb-0 md:pt-0"
+          imageWrapperClassName="absolute bottom-10 left-1/2 -translate-x-1/2 md:static md:bottom-auto md:left-auto md:translate-x-0 md:justify-self-center"
+          autoText={
+            <TypewriterText
+              phrases={heroLines[language as 'ro' | 'en'] ?? heroLines.en}
+              className="min-h-[3.5rem] break-normal text-lg font-semibold leading-relaxed tracking-tight text-white sm:min-h-[2rem] sm:text-xl"
+            />
+          }
+        />
+      </motion.div>
     </div>
   )
 }
