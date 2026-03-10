@@ -9,15 +9,15 @@
     "ro": "Sunt un dezvoltator software cu un puternic accent pe arhitectură curată, performanță și ușurință în utilizare. Construiesc aplicații web și mobile scalabile, având mereu în vedere codul ușor de întreținut și experiențele intuitive pentru utilizatori. Sunt motivat de îmbunătățirea continuă, de practicile moderne de dezvoltare și de livrarea unor produse rapide și orientate spre scop."
   },
   "location": {
-    "en": "Your City, Your Country",
-    "ro": "Orașul tău, Țara ta"
+    "en": "Buzau, Romania",
+    "ro": "Buzău, România"
   },
   "iam": {
     "en": "I am",
     "ro": "Eu sunt"
   },
-  "email": "you@example.com",
-  "phone": "+00 000 000 000",
+  "email": "florinionut.polifron@gmail.com",
+  "phone": "+40763522838",
   "skills": [
     "HTML3",
     "CSS",
@@ -172,11 +172,11 @@
   "socialLinks": [
     {
       "label": "GitHub",
-      "url": "https://github.com/your-username"
+      "url": "https://github.com/Polifron"
     },
     {
       "label": "LinkedIn",
-      "url": "https://linkedin.com/in/your-profile"
+      "url": "https://www.linkedin.com/in/florentin-ionut-polifron-2ab76321b/"
     }
   ],
   "experience": [

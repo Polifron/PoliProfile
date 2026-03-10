@@ -22,20 +22,21 @@ jobs:
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v5
-      
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-      
+          node-version: "20"
+
       - run: npm install
-      
+
       - run: npm run build
         env:
           VITE_BASE: /PoliProfile/
-      
+          VITE_CONTACT_ENDPOINT: https://mail-node-nidj.onrender.com/send-email
+
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: 'dist'
+          path: "dist"
 
   deploy:
     runs-on: ubuntu-latest
