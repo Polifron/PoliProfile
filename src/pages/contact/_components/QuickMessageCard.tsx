@@ -4,6 +4,7 @@ import { useAppSettings } from '@/context/AppSettingsContext'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { useState } from 'react'
+import profile from '@/data/profile.json'
 
 export default function QuickMessageCard() {
   const { t } = useAppSettings()
@@ -33,11 +34,20 @@ export default function QuickMessageCard() {
 
     try {
       const isThirdParty = Boolean(import.meta.env.VITE_CONTACT_ENDPOINT)
-      const headers = isThirdParty
-        ? { 'Content-Type': 'application/x-www-form-urlencoded' }
-        : { 'Content-Type': 'application/json' }
+      const headers = { 'Content-Type': 'application/json' }
+
       const body = isThirdParty
-        ? new URLSearchParams({ name, email, message })
+        ? JSON.stringify({
+          // Keep generic contact fields while also supporting mail APIs
+          // that require Nodemailer-like fields.
+          name,
+          email,
+          message,
+          to: profile.email,
+          subject: `New portfolio message from ${name}`,
+          text: `From: ${name} <${email}>\n\n${message}`,
+          html: `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p><p>${message.replace(/\n/g, '<br/>')}</p>`,
+        })
         : JSON.stringify({ name, email, message })
 
       const response = await fetch(contactEndpoint, {
